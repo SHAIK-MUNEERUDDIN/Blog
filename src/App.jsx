@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import { Header, Footer } from "./components/Index";
 import authService from "./appwrite/auth";
 import { login, logout } from "./store/authSlice";
-import "./App.css";
 import { Outlet } from "react-router-dom";
 
 function App() {
@@ -27,7 +26,9 @@ function App() {
     <div>
       <div>
         <Header />
-        <main>{/* <Outlet /> */}</main>
+        <main>
+          <Outlet />
+        </main>
         <Footer />
       </div>
     </div>

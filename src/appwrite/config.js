@@ -107,7 +107,9 @@ export class Service {
   }
 
   getFilePreview(fileID) {
-    return this.storage.getFilePreview(conf.appwriteBucketId, fileID);
+    if (fileID) {
+      return this.storage.getFilePreview(conf.appwriteBucketId, fileID);
+    }
   }
 }
 
