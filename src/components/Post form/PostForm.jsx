@@ -39,7 +39,6 @@ function PostForm({ post }) {
         data.featuredImage = fileId;
         const dbPost = service.createPost({
           ...data,
-          featuredImage: fileId,
           userId: userData.$id,
         });
         if (dbPost) {
